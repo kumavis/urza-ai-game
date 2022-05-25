@@ -1,0 +1,23 @@
+{
+  "name": "urza-ai-game",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "beefy index.js",
+    "build": "rm -rf dist && mkdir dist && cp index.html dist/ && browserify index.js > dist/bundle.js",
+    "deploy": "ghpages -d dist"
+  },
+  "browser": {
+    "node-fetch": false
+  },
+  "dependencies": {
+    "ghpages": "^0.0.10",
+    "node-fetch": "^2"
+  },
+  "devDependencies": {
+    "beefy": "^2.1.8",
+    "brace-expansion": "^2.0.1",
+    "browserify": "^17.0.0"
+  }
+}
