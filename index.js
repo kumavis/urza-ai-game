@@ -49,8 +49,9 @@ function generateDeckButton(playerState) {
     playerState.loading = true
     render()
     const deck = await getDeck()
-    console.log(deck)
-    localStorage.setItem('deck', JSON.stringify(deck))
+    const deckString = JSON.stringify(deck)
+    console.log(deckString)
+    localStorage.setItem('deck', deckString)
     playerState.deck = deck
     playerState.hand = []
     playerState.loading = false
